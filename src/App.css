@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Pacifico", cursive;
+  text-shadow: 2px 2px 4px rgb(13, 36, 36);
+}
+.App {
+  min-height: 100vh;
+  background-color: rgb(31, 90, 90);
+  color: white;
+}
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.score h3 {
+  padding-top: 1rem;
+}
+.container {
+  width: 580px;
+  margin: 0 auto;
+}
+.container img {
+  width: 125px;
+  border-radius: 50%;
+  background-color: aqua;
+  margin: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+.container img:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* congratulations */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 20, 20, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+  font-style: italic;
+}
+.congrats button {
+  display: inline-block;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.congrats button:hover {
+  background-color: #3e8e41;
+}
+
+.congrats h1 {
+  margin-bottom: 20px;
+}
+/* media */
+
+@media only screen and (max-width: 600px) {
+  .App {
+    width: 100%;
+  }
+  .container {
+    margin-top: 4rem;
+    width: 344px;
+  }
+  .container img {
+    width: 80px;
+    margin: 3px;
+  }
+}
+@media only screen and (min-width: 2200px) {
+  body {
+    font-size: 2rem;
+  }
+  .container {
+    width: 1500px;
+  }
+  .container img {
+    width: 250px;
+    margin: 3rem;
+  }
+}
